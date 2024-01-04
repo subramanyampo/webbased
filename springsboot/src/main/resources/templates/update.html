@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Update Task</title>
+</head>
+<body>
+    <h1>Update Task</h1>
+    <form action="/addtask" method="post">
+        <input type="hidden" name="id" th:value="${data.id}" />
+        
+        <label>Title:</label>
+        <input type="text" name="title" th:value="${data.title}" />
+        
+        <br />
+        
+        <label >Description:</label>
+        <textarea name="description" th:text="${data.description}"></textarea>
+        
+        <br />
+        
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

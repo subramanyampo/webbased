@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1>Details</h1>
+    <table border="2px">
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Description</td>
+                <td>Delete</td>
+                <td>Update</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="x : ${f}">
+                <td th:text="${x.title}"></td>
+                <td th:text="${x.description}"></td>
+                <td>
+                    <a th:href="@{'/delete?id=' + ${x.id}}">Delete</a>
+                </td>
+                <td>
+                    <a th:href="@{'/update?id=' + ${x.id}}">update</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/user}">Go to User Page</a>
+</body>
+</html>

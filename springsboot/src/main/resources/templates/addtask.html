@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Status Information:</h2>
+	
+<p>Status Code: <span th:text="${status.statuscode}"></span></p>
+<p>Message: <span th:text="${status.message}"></span></p>
+<tr th:each="x : ${status}">
+                title:<td th:text="${x.data.title}"></td>
+                descriptiom:<td th:text="${x.data.description}"></td>
+                
+ </tr><br>
+
+<a th:href="@{/user}">Go to User Page</a>
+
+
+
+
+</body>
+</html>
